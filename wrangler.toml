@@ -1,0 +1,17 @@
+name = "fietsherstel-booking"
+main = "src/index.js"
+type = "service-worker"
+pages_build_output_dir = "public"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[[kv_namespaces]]
+binding = "BOOKINGS"
+id = "your-kv-id"
+preview_id = "your-kv-preview-id"
+
+[[kv_namespaces]]
+binding = "AVAILABILITY"
+id = "your-availability-kv-id"
+preview_id = "your-availability-kv-preview-id"
