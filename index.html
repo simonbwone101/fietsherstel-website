@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fietsherstel Zaak - Afspraken Boeken</title>
+    <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🚲 Fietsherstel</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#over" class="nav-link">Over Ons</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#galerij" class="nav-link">Galerij</a></li>
+                <li><a href="#booking" class="nav-link btn-nav">Boeken</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welkom bij Fietsherstel</h2>
+                <p>Professionele en snelle fietsreparatie voor al uw fietsen</p>
+                <a href="#booking" class="btn-primary btn-lg">Maak een Afspraak</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="over" class="about-section">
+        <div class="container">
+            <h2>Over Ons</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Met meer dan 15 jaar ervaring in fietsherstel, bieden wij topkwaliteit service voor alle soorten fietsen. Van gewone stadsfietsen tot elektrische fietsen, wij repareren alles.</p>
+                    <p>Ons team bestaat uit erkende monteurs die met zorg en precisie aan elk project werken. We gebruiken alleen originele onderdelen en modern gereedschap.</p>
+                    <p>Uw fietsen zijn in goede handen bij ons!</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Jaar Ervaring</p>
+                    </div>
+                    <div class="stat">
+                        <h3>1000+</h3>
+                        <p>Tevreden Klanten</p>
+                    </div>
+                    <div class="stat">
+                        <h3>98%</h3>
+                        <p>Tevreden Klanten</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Onze Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Algemene Reparatie</h3>
+                    <p>Reparatie van remmen, versnellingen, wielen en andere onderdelen</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>E-Bike Service</h3>
+                    <p>Specialisatie in elektrische fietsen en batterijonderhoud</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Onderhoud</h3>
+                    <p>Regelmatig onderhoud om uw fiets in topconditie te houden</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Schilderwerk</h3>
+                    <p>Lak- en verfwerk voor het opfrissen van uw fiets</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛞</div>
+                    <h3>Banden & Velgen</h3>
+                    <p>Vervanging en reparatie van banden en velgen</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Inspectie</h3>
+                    <p>Gratis inspectie om eventuele problemen vast te stellen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="galerij" class="gallery-section">
+        <div class="container">
+            <h2>Onze Werk</h2>
+            <p class="gallery-subtitle">Bekijk voorbeelden van ons vakwerk</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Reparatie+1" alt="Reparatie project 1">
+                    <div class="gallery-overlay">
+                        <h3>Volledige revisie</h3>
+                        <p>Klassieke fiets volledig gerenoveerd</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Reparatie+2" alt="Reparatie project 2">
+                    <div class="gallery-overlay">
+                        <h3>E-Bike Service</h3>
+                        <p>Batterij vervangen en geupdate</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Reparatie+3" alt="Reparatie project 3">
+                    <div class="gallery-overlay">
+                        <h3>Poedercoating</h3>
+                        <p>Compleet nieuw uiterlijk gegeven</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-note">
+                <p>📸 Stuurt u ons foto's van uw fiets? We voegen ze graag toe aan onze galerij!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2>Maak een Afspraak</h2>
+            <p class="booking-subtitle">Vul het formulier in en we nemen contact met u op ter bevestiging</p>
+            
+            <div class="booking-wrapper">
+                <div class="booking-form-container">
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-group">
+                            <label for="name">Volledige Naam *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefoonnummer *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Type *</label>
+                            <select id="service" name="service" required>
+                                <option value="">-- Selecteer een service --</option>
+                                <option value="algemeen">Algemene Reparatie</option>
+                                <option value="ebike">E-Bike Service</option>
+                                <option value="onderhoud">Onderhoud</option>
+                                <option value="schilderwerk">Schilderwerk</option>
+                                <option value="banden">Banden & Velgen</option>
+                                <option value="inspectie">Inspectie</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Gewenste Datum *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Gewenste Tijd *</label>
+                            <select id="time" name="time" required>
+                                <option value="">-- Selecteer een tijd --</option>
+                                <option value="09:00">09:00</option>
+                                <option value="09:30">09:30</option>
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Beschrijving van het probleem</label>
+                            <textarea id="description" name="description" placeholder="Beschrijf hier wat er met uw fiets aan de hand is..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-block">Afspraak Aanvragen</button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+
+                <div class="booking-info-container">
+                    <div class="info-card">
+                        <h3>📍 Locatie</h3>
+                        <div class="location-info">
+                            <h4>Fietsherstel Winkel</h4>
+                            <p>Straatnaam 123</p>
+                            <p>1234 AB Amsterdam</p>
+                            <p>Tel: 020-1234567</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>⏰ Openingstijden</h3>
+                        <ul>
+                            <li>Maandag: 09:00 - 17:30</li>
+                            <li>Dinsdag: 09:00 - 17:30</li>
+                            <li>Woensdag: 09:00 - 17:30</li>
+                            <li>Donderdag: 09:00 - 17:30</li>
+                            <li>Vrijdag: 09:00 - 17:30</li>
+                            <li>Zaterdag: 10:00 - 16:00</li>
+                            <li>Zondag: Gesloten</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>💰 Prijzen</h3>
+                        <ul>
+                            <li>Inspectie: Gratis</li>
+                            <li>Uurwerk: €45/uur</li>
+                            <li>Wisselstukken: Tegen kostprijs</li>
+                            <li>Onderhoud pakket: €65</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contacteer Ons</h3>
+                    <div class="contact-item">
+                        <h4>📞 Telefoon</h4>
+                        <p><a href="tel:0201234567">020-1234567</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📧 Email</h4>
+                        <p><a href="mailto:info@fietsherstel.nl">info@fietsherstel.nl</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📍 Adres</h4>
+                        <p>Straatnaam 123<br>1234 AB Amsterdam</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>Volg Ons</h3>
+                    <div class="social-buttons">
+                        <a href="#" class="social-btn">Facebook</a>
+                        <a href="#" class="social-btn">Instagram</a>
+                        <a href="#" class="social-btn">WhatsApp</a>
+                        <a href="#" class="social-btn">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Fietsherstel Zaak. Alle rechten voorbehouden.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Algemene Voorwaarden</a>
+                <a href="#">Contacteer Ons</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="public/script.js"></script>
+</body>
+</html>
