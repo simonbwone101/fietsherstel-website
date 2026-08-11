@@ -1,3 +1,4 @@
+/* (same content as before, with updated about section styles) */
 * {
     margin: 0;
     padding: 0;
@@ -182,17 +183,21 @@ section h2 {
     background-color: white;
 }
 
+/* UPDATED: give the text more space and restrain the image so all about text fits */
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    grid-template-columns: 1fr minmax(280px, 420px); /* tekst krijgt meer ruimte, foto max 420px */
+    gap: 2rem;
+    align-items: start;
+    align-content: start;
 }
 
 .about-text p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     font-size: 1.05rem;
-    line-height: 1.8;
+    line-height: 1.75;
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 .about-image {
@@ -203,7 +208,8 @@ section h2 {
 }
 
 .about-image img {
-    max-width: 90%;
+    width: 100%;
+    max-width: 420px; /* voorkomt dat de foto te groot wordt */
     height: auto;
     border-radius: 8px;
     box-shadow: var(--shadow-lg);
@@ -725,6 +731,12 @@ section h2 {
     .services-grid,
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Make sure image doesn't overflow on small screens */
+    .about-image img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
