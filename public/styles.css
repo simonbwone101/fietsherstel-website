@@ -195,13 +195,16 @@ section h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .about-image img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     border-radius: 8px;
     box-shadow: var(--shadow-lg);
+    object-fit: cover;
+    object-position: center top;
 }
 
 .about-stats {
