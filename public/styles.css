@@ -84,10 +84,31 @@ body {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    /* Use the provided image as background. Keep a color fallback. */
+    background-color: var(--primary-color);
+    background-image: url('/images/AchtergrondOpening.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* for overlay pseudo-element */
     color: white;
     padding: 8rem 2rem;
     text-align: center;
+}
+
+/* Dark overlay so text remains readable over the photo */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+/* Ensure hero content sits above the overlay */
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content h2 {
@@ -99,7 +120,7 @@ body {
 .hero-content p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 /* ===== BUTTONS ===== */
