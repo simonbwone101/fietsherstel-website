@@ -585,29 +585,27 @@ section h2 {
 
 .contact-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
 }
 
-.contact-info,
-.social-links {
+.contact-info {
     background: var(--light-bg);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: var(--card-radius);
     box-shadow: var(--shadow);
 }
 
-.contact-info h3,
-.social-links h3 {
+.contact-info h3 {
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.25rem;
-    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
 
 .contact-item {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -618,10 +616,13 @@ section h2 {
 }
 
 .contact-item h4 {
-    font-size: 1.05rem;
+    font-size: 1rem;
     margin-bottom: 0.75rem;
     color: var(--dark-text);
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .contact-item p {
@@ -640,22 +641,37 @@ section h2 {
     text-decoration: underline;
 }
 
+.social-links {
+    background: var(--light-bg);
+    padding: 2.5rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
+}
+
+.social-links h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
 .social-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
 .social-btn {
     background-color: var(--accent-color);
     color: white;
-    padding: 0.85rem 1rem;
+    padding: 1rem;
     border-radius: 6px;
     text-align: center;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
     transition: background-color 0.3s, transform 0.2s;
+    display: block;
 }
 
 .social-btn:hover {
@@ -698,7 +714,7 @@ section h2 {
     }
     
     .contact-content {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 }
 
