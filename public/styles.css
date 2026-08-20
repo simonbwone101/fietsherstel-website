@@ -733,6 +733,18 @@ section h2 {
     .gallery-grid {
         grid-template-columns: 1fr;
     }
+
+    .map-container {
+    margin-top: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+}
 }
 
 @media (max-width: 480px) {
