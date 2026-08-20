@@ -585,34 +585,55 @@ section h2 {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.contact-info,
+.social-links {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
 }
 
 .contact-info h3,
 .social-links h3 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 .contact-item {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .contact-item h4 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
     color: var(--dark-text);
+    font-weight: 600;
 }
 
 .contact-item p {
     color: #666;
     line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 .contact-item a {
     color: var(--primary-color);
     text-decoration: none;
+    font-weight: 500;
 }
 
 .contact-item a:hover {
@@ -626,23 +647,19 @@ section h2 {
 }
 
 .social-btn {
-    background: linear-gradient(
-        45deg,
-        #f09433,
-        #e6683c,
-        #dc2743,
-        #cc2366,
-        #bc1888
-    );
+    background-color: var(--accent-color);
     color: white;
-    padding: 0.75rem 1rem;
+    padding: 0.85rem 1rem;
     border-radius: 6px;
     text-align: center;
     text-decoration: none;
-    transition: transform 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .social-btn:hover {
+    background-color: #1565c0;
     transform: translateY(-2px);
 }
 
@@ -677,6 +694,10 @@ section h2 {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
     .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-content {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -718,7 +739,7 @@ section h2 {
     }
 
     .social-buttons {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .hero {
@@ -733,18 +754,6 @@ section h2 {
     .gallery-grid {
         grid-template-columns: 1fr;
     }
-
-    .map-container {
-    margin-top: 1rem;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.map-container iframe {
-    display: block;
-    width: 100%;
-}
 }
 
 @media (max-width: 480px) {
@@ -769,5 +778,13 @@ section h2 {
         width: 56px;
         height: 56px;
         font-size: 1.6rem;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-buttons {
+        grid-template-columns: 1fr;
     }
 }
