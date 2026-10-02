@@ -1,0 +1,23 @@
+{
+  "name": "bikehouse-bookings",
+  "main": "src/worker.js",
+  "compatibility_date": "2024-01-01",
+  "env": {
+    "development": {
+      "name": "bikehouse-bookings-dev",
+      "routes": []
+    },
+    "production": {
+      "name": "bikehouse-bookings",
+      "routes": [
+        {
+          "pattern": "api.bikehouselein.com/*",
+          "zone_name": "bikehouselein.com"
+        }
+      ]
+    }
+  },
+  "build": {
+    "command": "npm install"
+  }
+}

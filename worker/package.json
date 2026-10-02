@@ -1,0 +1,24 @@
+{
+  "name": "bikehouse-bookings-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for Bikehouse Lein booking API",
+  "main": "src/worker.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node test-worker.js"
+  },
+  "keywords": [
+    "cloudflare",
+    "worker",
+    "google-calendar",
+    "google-sheets",
+    "bookings"
+  ],
+  "author": "simonbwone101",
+  "license": "ISC",
+  "devDependencies": {
+    "wrangler": "^3.40.0"
+  }
+}
