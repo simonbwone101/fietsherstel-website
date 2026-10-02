@@ -1,12 +1,71 @@
 // Form handling
 const bookingForm = document.getElementById('bookingForm');
 const formMessage = document.getElementById('formMessage');
+const dateInput = document.getElementById('date');
+const timeSelect = document.getElementById('time');
+
+// API endpoint - adjust based on your Cloudflare Worker URL
+const API_BASE_URL = 'https://api.bikehouselein.com'; // Replace with your actual worker URL
+
+function setTimeOptions(times = []) {
+  if (!timeSelect) {
+    return;
+  }
+
+  if (!times.length) {
+    timeSelect.innerHTML = '<option value="">Geen vrije tijden beschikbaar</option>';
+    timeSelect.disabled = true;
+    return;
+  }
+
+  timeSelect.disabled = false;
+  timeSelect.innerHTML = '<option value="">-- Selecteer een tijd --</option>' +
+    times.map((time) => `<option value="${time}">${time}</option>`).join('');
+}
+
+async function loadAvailableTimes() {
+  if (!dateInput || !timeSelect) {
+    return;
+  }
+
+  const selectedDate = dateInput.value;
+  if (!selectedDate) {
+    setTimeOptions([]);
+    return;
+  }
+
+  try {
+    // Disable select while loading
+    timeSelect.disabled = true;
+    timeSelect.innerHTML = '<option value="">Laden...</option>';
+
+    const response = await fetch(`${API_BASE_URL}/api/availability?date=${encodeURIComponent(selectedDate)}`);
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || 'Kon de beschikbare tijden niet laden.');
+    }
+
+    setTimeOptions(data.availableTimes || []);
+  } catch (error) {
+    console.error('Availability error:', error);
+    setTimeOptions([]);
+    if (formMessage) {
+      formMessage.classList.remove('success');
+      formMessage.classList.add('error');
+      formMessage.textContent = 'Kon de beschikbare tijdstippen niet laden. Probeer het later opnieuw.';
+    }
+  }
+}
+
+if (dateInput) {
+  dateInput.addEventListener('change', loadAvailableTimes);
+}
 
 if (bookingForm) {
   bookingForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
-    // Form data verzamelen
+
     const formData = {
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
@@ -18,8 +77,7 @@ if (bookingForm) {
     };
 
     try {
-      // API call naar backend
-      const response = await fetch('/api/bookings', {
+      const response = await fetch(`${API_BASE_URL}/api/bookings`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -29,17 +87,17 @@ if (bookingForm) {
 
       const data = await response.json();
 
-      // Toon berichten
       formMessage.classList.remove('error');
       formMessage.classList.add(data.success ? 'success' : 'error');
-      formMessage.textContent = data.message;
+      formMessage.textContent = data.message || data.error;
 
       if (data.success) {
-        // Reset formulier na 2 seconden
         setTimeout(() => {
           bookingForm.reset();
+          setTimeOptions([]);
           formMessage.classList.remove('success');
-        }, 2000);
+          formMessage.textContent = '';
+        }, 3000);
       }
     } catch (error) {
       console.error('Error:', error);
@@ -64,14 +122,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Mobile menu toggle (voeg dit toe als je een hamburger menu wilt)
+// Mobile menu toggle
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
-    // Sluit menu na klik (voeg dit toe als je hamburger menu hebt)
-    navMenu.classList.remove('active');
+    if (navMenu) {
+      navMenu.classList.remove('active');
+    }
   });
 });
 
