@@ -1,0 +1,43 @@
+name: Deploy Cloudflare Worker
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'worker/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: worker
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: worker/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Deploy Worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+          GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
+          GOOGLE_SPREADSHEET_ID: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
+        run: |
+          printf '%s' "$GOOGLE_SERVICE_ACCOUNT" | npx wrangler secret put GOOGLE_SERVICE_ACCOUNT --name bikehouse-bookings --env production
+          printf '%s' "$GOOGLE_CALENDAR_ID" | npx wrangler secret put GOOGLE_CALENDAR_ID --name bikehouse-bookings --env production
+          printf '%s' "$GOOGLE_SPREADSHEET_ID" | npx wrangler secret put GOOGLE_SPREADSHEET_ID --name bikehouse-bookings --env production
+          npx wrangler deploy --env production
