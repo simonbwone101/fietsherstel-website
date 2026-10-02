@@ -4,10 +4,9 @@ const formMessage = document.getElementById('formMessage');
 const dateInput = document.getElementById('date');
 const timeSelect = document.getElementById('time');
 
-// 🔴 IMPORTANT: Update this with your actual Cloudflare Worker URL
-// Replace with: https://bikehouse-bookings.<account-id>.workers.dev
-// Or if using custom domain: https://api.bikehouselein.com
-const API_BASE_URL = 'https://bikehouse-bookings.REPLACE_WITH_YOUR_WORKER_ID.workers.dev';
+// Production Worker URL. If Cloudflare custom domain is not yet live,
+// replace this with your workers.dev URL (for example: https://bikehouse-bookings.<account-id>.workers.dev)
+const API_BASE_URL = 'https://api.bikehouselein.com';
 
 function setTimeOptions(times = []) {
   if (!timeSelect) {
