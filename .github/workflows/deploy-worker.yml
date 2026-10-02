@@ -26,12 +26,7 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
+        run: npm install
 
       - name: Deploy Worker
         env:
@@ -40,8 +35,4 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
           GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
           GOOGLE_SPREADSHEET_ID: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
-        run: |
-          printf '%s' "$GOOGLE_SERVICE_ACCOUNT" | npx wrangler secret put GOOGLE_SERVICE_ACCOUNT --name bikehouse-bookings --env production
-          printf '%s' "$GOOGLE_CALENDAR_ID" | npx wrangler secret put GOOGLE_CALENDAR_ID --name bikehouse-bookings --env production
-          printf '%s' "$GOOGLE_SPREADSHEET_ID" | npx wrangler secret put GOOGLE_SPREADSHEET_ID --name bikehouse-bookings --env production
-          npx wrangler deploy --env production
+        run: npx wrangler deploy --env production
