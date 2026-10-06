@@ -17,7 +17,7 @@
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#galerij" class="nav-link">Galerij</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#booking" class="nav-link btn-nav">Maak een afspraak</a></li>
+                <li><a href="https://calendar.app.google/oiG96mHGZFGnvVL96" class="nav-link btn-nav" target="_blank" rel="noopener noreferrer">Maak een afspraak</a></li>
             </ul>
         </div>
     </nav>
@@ -28,7 +28,7 @@
             <div class="hero-content">
                 <h2>Welkom bij Bikehouse Lein</h2>
                 <p>jouw lokale fietsexpert in Gent</p>
-                <a href="#booking" class="btn-primary btn-lg">Maak een Afspraak</a>
+                <a href="https://calendar.app.google/oiG96mHGZFGnvVL96" class="btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Maak een Afspraak</a>
             </div>
         </div>
     </section>
@@ -39,9 +39,9 @@
             <h2>Over Ons</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Bikehouselein is een fietsatelier voor de sportieve fietser. We helpen je bij het vinden van de juiste fiets, verzorgen onderhoud en herstellingen, en zoeken steeds naar de oplossing die het best bij jou en je fiets past.
-                    <p>Achter Bikehouselein staat Zahre Lein, fervent fietser, renner en bikepacker. Vanuit een passie voor de fiets groeide het idee om een atelier op te richten waar kwaliteit, vakmanschap en persoonlijke service centraal staan. 
-                    <p>Je kan bij Bikehouselein terecht voor herstellingen van racefietsen, gravelbikes en trekkingfietsen, maar ook voor volledig op maat gebouwde custom fietsen. Daarnaast bieden we samen met Club 9000 fietsen van Giant en Liv aan en geven we zorgvuldig geselecteerde tweedehandsfietsen een tweede leven.
+                    <p>Bikehouselein is een fietsatelier voor de sportieve fietser. We helpen je bij het vinden van de juiste fiets, verzorgen onderhoud en herstellingen, en zoeken steeds naar de [...]
+                    <p>Achter Bikehouselein staat Zahre Lein, fervent fietser, renner en bikepacker. Vanuit een passie voor de fiets groeide het idee om een atelier op te richten waar kwaliteit, v[...]
+                    <p>Je kan bij Bikehouselein terecht voor herstellingen van racefietsen, gravelbikes en trekkingfietsen, maar ook voor volledig op maat gebouwde custom fietsen. Daarnaast bieden[...]
                 </div>
                 <div class="about-image">
                     <img src="images/OverOns.png" alt="Fietshersteller aan het werk">
@@ -120,69 +120,14 @@
     <section id="booking" class="booking-section">
         <div class="container">
             <h2>Maak een Afspraak</h2>
-            <p class="booking-subtitle">Vul het formulier in & we nemen contact met u op </p>
+            <p class="booking-subtitle">Plan je afspraak direct in onze Google Calendar</p>
             
             <div class="booking-wrapper">
                 <div class="booking-form-container">
-                    <form id="bookingForm" class="booking-form">
-                        <div class="form-group">
-                            <label for="name">Voornaam + naam *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Telefoonnummer *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">Service Type *</label>
-                            <select id="service" name="service" required>
-                                <option value="">-- Selecteer een service --</option>
-                                <option value="groot">Groot onderhoud</option>
-                                <option value="klein">Klein onderhoud</option>
-                                <option value="custom">Custom builds</option>
-                                <option value="banden">Bandenservice</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="date">Gewenste Datum *</label>
-                            <input type="date" id="date" name="date" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="time">Gewenste Tijd *</label>
-                            <select id="time" name="time" required>
-                                <option value="">-- Selecteer een tijd --</option>
-                                <option value="09:00">09:00</option>
-                                <option value="09:30">09:30</option>
-                                <option value="10:00">10:00</option>
-                                <option value="10:30">10:30</option>
-                                <option value="11:00">11:00</option>
-                                <option value="11:30">11:30</option>
-                                <option value="14:00">14:00</option>
-                                <option value="14:30">14:30</option>
-                                <option value="15:00">15:00</option>
-                                <option value="15:30">15:30</option>
-                                <option value="16:00">16:00</option>
-                                <option value="16:30">16:30</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="description">Beschrijving van het probleem</label>
-                            <textarea id="description" name="description" placeholder="Beschrijf hier wat er met uw fiets aan de hand is..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-primary btn-block">Afspraak Aanvragen</button>
-                        <div id="formMessage" class="form-message"></div>
-                    </form>
+                    <div class="booking-cta">
+                        <p>Klik op de knop hieronder om een afspraak in te plannen. Je wordt doorgestuurd naar onze Google Calendar waar je een geschikt moment voor je kunt kiezen.</p>
+                        <a href="https://calendar.app.google/oiG96mHGZFGnvVL96" class="btn-primary btn-lg" target="_blank" rel="noopener noreferrer">📅 Maak een Afspraak</a>
+                    </div>
                 </div>
 
                 <div class="booking-info-container">
@@ -233,20 +178,20 @@
                         <p><a href="mailto:Bikehouselein@gmail.com">Bikehouselein@gmail.com</a></p>
                     </div>
                    <div class="contact-item">
- <h4>📍 Adres</h4>
- <p>Herlegemstraat 66<br>9040 Destelbergen</p>
+                 <h4>📍 Adres</h4>
+                 <p>Herlegemstraat 66<br>9040 Destelbergen</p>
 
- <div class="map-container">
- <iframe
- src="https://www.google.com/maps?q=Herlegemstraat+66,+9040+Destelbergen&output=embed"
- width="100%"
- height="300"
- style="border:0;"
- allowfullscreen=""
- loading="lazy">
- </iframe>
- </div>
-</div>
+                 <div class="map-container">
+                 <iframe
+                 src="https://www.google.com/maps?q=Herlegemstraat+66,+9040+Destelbergen&output=embed"
+                 width="100%"
+                 height="300"
+                 style="border:0;"
+                 allowfullscreen=""
+                 loading="lazy">
+                 </iframe>
+                 </div>
+                </div>
                 </div>
 
                 <div class="social-links">
