@@ -31,7 +31,6 @@ body {
     padding: 0 2rem;
 }
 
-/* ===== NAVIGATION ===== */
 .navbar {
     background-color: white;
     box-shadow: var(--shadow);
@@ -84,21 +83,18 @@ body {
     background-color: #b71c1c;
 }
 
-/* ===== HERO SECTION ===== */
 .hero {
-    /* Use the provided image as background. Keep a color fallback. */
     background-color: var(--primary-color);
     background-image: url('/images/AchtergrondOpening.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative; /* for overlay pseudo-element */
+    position: relative;
     color: white;
     padding: 8rem 2rem;
     text-align: center;
 }
 
-/* Dark overlay so text remains readable over the photo */
 .hero::before {
     content: "";
     position: absolute;
@@ -107,7 +103,6 @@ body {
     z-index: 0;
 }
 
-/* Ensure hero content sits above the overlay */
 .hero-content {
     position: relative;
     z-index: 1;
@@ -125,18 +120,20 @@ body {
     opacity: 0.95;
 }
 
-/* ===== BUTTONS ===== */
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 0.75rem 2rem;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
     text-decoration: none;
     box-shadow: 0 6px 18px rgba(211,47,47,0.08);
 }
@@ -152,20 +149,6 @@ body {
     font-size: 1.1rem;
 }
 
-.btn-block {
-    width: 100%;
-}
-
-.btn-secondary {
-    background-color: #757575;
-    color: white;
-}
-
-.btn-secondary:hover {
-    background-color: #616161;
-}
-
-/* ===== SECTIONS ===== */
 section {
     padding: 4rem 0;
 }
@@ -177,7 +160,6 @@ section h2 {
     text-align: center;
 }
 
-/* ===== ABOUT SECTION ===== */
 .about-section {
     background-color: white;
 }
@@ -211,31 +193,6 @@ section h2 {
     object-position: center top;
 }
 
-.about-stats {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
-.stat {
-    background: var(--light-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
-    text-align: center;
-}
-
-.stat h3 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.stat p {
-    color: #666;
-}
-
-/* ===== SERVICES SECTION ===== */
 .services-section {
     background-color: var(--light-bg);
 }
@@ -265,12 +222,6 @@ section h2 {
     box-shadow: var(--shadow-lg);
 }
 
-.service-top {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
 .service-icon {
     width: 64px;
     height: 64px;
@@ -298,27 +249,6 @@ section h2 {
     font-size: 0.98rem;
 }
 
-.service-actions {
-    margin-top: auto; /* push actions to bottom */
-}
-
-.service-cta {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--accent-color);
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.2s, transform 0.15s;
-}
-
-.service-cta:hover {
-    background: #135aa6;
-    transform: translateY(-2px);
-}
-
-/* ===== GALLERY SECTION ===== */
 .gallery-section {
     background-color: white;
 }
@@ -391,103 +321,55 @@ section h2 {
     text-align: center;
 }
 
-/* ===== BOOKING SECTION ===== */
 .booking-section {
-    background-color: var(--light-bg);
+    background-color: #f2f2f2;
+    padding: 5rem 0;
 }
 
-.booking-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: start;
-}
-
-.booking-cta-center {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.booking-info-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-.info-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-}
-
-.info-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.info-card ul {
-    list-style: none;
-}
-
-.info-card li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.info-card li:last-child {
-    border-bottom: none;
-}
-
-.times-list {
+.booking-container {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.time-slot {
-    padding: 0.75rem;
-    background-color: var(--light-bg);
-    border-radius: 4px;
-    border-left: 4px solid var(--primary-color);
-    font-size: 0.9rem;
-}
-
-.time-slot.unavailable {
-    opacity: 0.5;
-    border-left-color: #999;
-    color: #999;
-}
-
-.loading {
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: #999;
 }
 
-.location-info {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border-color);
+.booking-title {
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    color: #d92a2a;
+    margin: 0 0 2rem;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-.location-info:last-child {
-    margin-bottom: 0;
-    border-bottom: none;
+.booking-btn-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.location-info h4 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+.booking-btn {
+    width: min(100%, 520px);
+    min-height: 90px;
+    padding: 1.25rem 2.5rem;
+    border-radius: 10px;
+    font-size: clamp(1.4rem, 2vw, 2.2rem);
+    line-height: 1.2;
+    background-color: #d92a2a;
+    box-shadow: none;
 }
 
-.location-info p {
-    font-size: 0.9rem;
-    margin: 0.3rem 0;
+.booking-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.18);
+    font-size: 1.4rem;
 }
 
-/* ===== CONTACT SECTION ===== */
 .contact-section {
     background-color: white;
 }
@@ -571,14 +453,7 @@ section h2 {
 }
 
 .social-btn {
-    background: linear-gradient(
-        45deg,
-        #f09433,
-        #e6683c,
-        #dc2743,
-        #cc2366,
-        #bc1888
-    );
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     color: white;
     padding: 0.75rem 1rem;
     border-radius: 6px;
@@ -591,7 +466,6 @@ section h2 {
     transform: translateY(-2px);
 }
 
-/* ===== FOOTER ===== */
 .footer {
     background-color: var(--dark-text);
     color: white;
@@ -605,26 +479,10 @@ section h2 {
     text-align: center;
 }
 
-.footer-links {
-    margin-top: 1rem;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 0.5rem;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
     .contact-content {
         grid-template-columns: 1fr;
     }
@@ -636,51 +494,42 @@ section h2 {
         gap: 1rem;
         padding: 1rem;
     }
-
     .nav-menu {
         flex-direction: column;
         gap: 0.5rem;
     }
-
     .hero-content h2 {
         font-size: 2rem;
     }
-
     .hero-content p {
         font-size: 1rem;
     }
-
     section h2 {
         font-size: 1.8rem;
     }
-
     .about-content {
         grid-template-columns: 1fr;
     }
-
-    .booking-wrapper {
-        grid-template-columns: 1fr;
-    }
-
     .contact-content {
         grid-template-columns: 1fr;
     }
-
     .social-buttons {
         grid-template-columns: 1fr 1fr;
     }
-
     .hero {
         padding: 4rem 1rem;
     }
-
     section {
         padding: 2rem 0;
     }
-
     .services-grid,
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+    .booking-btn {
+        width: min(100%, 420px);
+        min-height: 72px;
+        font-size: 1.5rem;
     }
 }
 
@@ -688,31 +537,30 @@ section h2 {
     .hero-content h2 {
         font-size: 1.5rem;
     }
-
     .nav-menu {
         gap: 0.5rem;
     }
-
     .nav-link {
         font-size: 0.9rem;
     }
-
     .btn-lg {
         padding: 0.75rem 1.5rem;
         font-size: 1rem;
     }
-
     .service-icon {
         width: 56px;
         height: 56px;
         font-size: 1.6rem;
     }
-    
     .contact-content {
         grid-template-columns: 1fr;
     }
-    
     .social-buttons {
         grid-template-columns: 1fr;
+    }
+    .booking-btn {
+        width: min(100%, 320px);
+        min-height: 64px;
+        font-size: 1.25rem;
     }
 }
