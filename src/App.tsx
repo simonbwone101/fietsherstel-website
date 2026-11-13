@@ -230,15 +230,7 @@ export default function App() {
             <div>
               <p className="eyebrow">Recent werk</p>
             </div>
-            <a
-              className="text-link"
-              href="https://www.instagram.com/bikehouse_lein/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Meer op Instagram
-              <ArrowIcon />
-            </a>
+          
           </div>
           <div className="projects-grid">
             {projects.map((project) => (
@@ -251,6 +243,15 @@ export default function App() {
               </article>
             ))}
           </div>
+          <a
+              className="text-link"
+              href="https://www.instagram.com/bikehouse_lein/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Meer op Instagram
+              <ArrowIcon />
+            </a>
         </section>
 
         <section className="booking-banner" aria-labelledby="booking-title">
