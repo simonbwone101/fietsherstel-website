@@ -230,7 +230,6 @@ export default function App() {
             <div>
               <p className="eyebrow">Recent werk</p>
             </div>
-          
           </div>
           <div className="projects-grid">
             {projects.map((project) => (
