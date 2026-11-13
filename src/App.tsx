@@ -160,17 +160,14 @@ export default function App() {
               </a>
             </div>
           </div>
-          
         </section>
- <section id="services" className="section services-section">
+        <section id="services" className="section services-section">
           <div className="services-intro">
             <div>
               <p className="eyebrow eyebrow--light">Onze services</p>
               <h2>Waar heeft je fiets behoefte aan?</h2>
             </div>
-            <p>
-              Onderhoud afgestemd op jou & je fiets
-            </p>
+            <p>Onderhoud afgestemd op jou &amp; je fiets</p>
           </div>
           <div className="services-list">
             {services.map((service) => (
@@ -202,7 +199,7 @@ export default function App() {
                 Of het nu gaat om een kleine herstelling of een groot onderhoud: we nemen de tijd om naar je te luisteren en fixen je probleem.
               </p>
               <p>
-                Bikehouse Lein is ook een ontmoetingsplek. We organiseren social rides, drop rides en werken nauw samen met de community van Club 9000. Daarnaast vind je ons wekelijks op donderdag aan het werk bij Giedon.
+                Bikehouse Lein is ook een ontmoetingsplek. We organiseren social rides, drop rides en werken nauw samen met de community van Club 9000. Daarnaast vind je ons wekelijks op donderdag aan het werk bij Giedion.
               </p>
             </div>
           </div>
@@ -239,14 +236,14 @@ export default function App() {
             ))}
           </div>
           <a
-              className="text-link"
-              href="https://www.instagram.com/bikehouse_lein/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Meer op Instagram
-              <ArrowIcon />
-            </a>
+            className="text-link"
+            href="https://www.instagram.com/bikehouse_lein/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Meer op Instagram
+            <ArrowIcon />
+          </a>
         </section>
 
         <section className="booking-banner" aria-labelledby="booking-title">
@@ -294,6 +291,14 @@ export default function App() {
                 <br />
                 9040 Destelbergen
               </a>
+            </div>
+            <div className="contact-item">
+              <span>Openingsuren</span>
+              <p>
+                dinsdag 9-17h.
+                <br />
+                De andere dagen van de week op afspraak
+              </p>
             </div>
           </div>
         </section>
