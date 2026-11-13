@@ -326,7 +326,8 @@ export default function App() {
           </span>
           <span>
             <strong>Bikehouse Lein</strong>
-            <small>Fietsatelier Gent</small>
+            <small>Herlegemstraat 66</small>
+            <small>9040 Destelbergen</small>
           </span>
         </a>
         <p>Onderhoud, herstellingen en custom builds.</p>
