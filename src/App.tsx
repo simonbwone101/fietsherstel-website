@@ -281,9 +281,9 @@ export default function App() {
                   lineHeight: 1.45,
                 }}
               >
-                dinsdag 9-17h.
+                Dinsdag 9h-17h
                 <br />
-                De andere dagen van de week op afspraak
+                Andere dagen van de week op afspraak
               </p>
             </div>
             <div className="contact-item">
