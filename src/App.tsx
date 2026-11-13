@@ -7,19 +7,19 @@ const services = [
     number: "01",
     title: "Groot onderhoud",
     description:
-      "Een grondige check van banden, aandrijving, lagers, remmen, bouten, bandendruk en spaakspanning.",
+      "Een grondige check van je aandrijving, lagers, remmen, algemene boutcontrole, banden en spaakspanning.",
   },
   {
     number: "02",
     title: "Klein onderhoud",
     description:
-      "Ketting smeren en remmen en versnellingen nauwkeurig afstellen, zodat je fiets weer vlot rijdt.",
+      "Ketting smeren, remmen en versnellingen nauwkeurig afstellen.",
   },
   {
     number: "03",
     title: "Custom builds",
     description:
-      "Van een nieuwe groepset tot een volledig opgebouwde fiets die past bij jouw ritten en ambities.",
+      "Van een nieuwe groepset tot een volledig naar wens opgebouwde fiets.",
   },
   {
     number: "04",
@@ -170,11 +170,10 @@ export default function App() {
           <div className="services-intro">
             <div>
               <p className="eyebrow eyebrow--light">Onze services</p>
-              <h2>Alles om jouw fiets in topvorm te houden.</h2>
+              <h2>Waar heeft je fiets behoefte aan?</h2>
             </div>
             <p>
-              Geen standaardoplossing, maar onderhoud afgestemd op je fiets,
-              rijstijl en plannen.
+              Onderhoud afgestemd op jou & je fiets
             </p>
           </div>
           <div className="services-list">
@@ -198,19 +197,16 @@ export default function App() {
             </div>
             <div className="about-copy">
               <p className="lead">
-                Bikehouse Lein is het fietsatelier van Zahre Lein: fervent
-                fietser, renner en bikepacker.
+                Bikehouse Lein is het fietsatelier van Zahre Lein.
               </p>
               <p>
-                Vanuit die passie ontstond een plek waar kwaliteit, persoonlijk
-                advies en technisch vakmanschap centraal staan. We denken mee
-                over wat jouw fiets nodig heeft en werken elke herstelling
-                zorgvuldig af.
+                Vanuit een passie voor het vak ontstond een plek waar de sportieve en karaktervolle fiets centraal staat.  
               </p>
               <p>
-                Je kan bij ons terecht met racefietsen, gravelbikes en
-                trekkingfietsen, van een snelle afstelling tot een volledig op
-                maat gebouwde fiets.
+                Of het nu gaat om een kleine herstelling of een groot onderhoud: we nemen de tijd om naar je te luisteren en fixen je probleem.
+              </p>
+              <p>
+                Bikehouse Lein is ook een ontmoetingsplek. We organiseren social rides, drop rides en werken nauw samen met de community van Club 9000. Daarnaast vind je ons wekelijks op donderdag aan het werk bij Giedon.
               </p>
             </div>
           </div>
@@ -233,7 +229,6 @@ export default function App() {
           <div className="work-heading">
             <div>
               <p className="eyebrow">Recent werk</p>
-              <h2>Met aandacht gebouwd. Klaar om te rijden.</h2>
             </div>
             <a
               className="text-link"
