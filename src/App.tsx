@@ -276,6 +276,12 @@ export default function App() {
               een afspraak.
             </p>
           </div>
+           <div className="contact-details">
+            <div className="contact-item">
+              <span>Openingsuren/span>
+              <a href="Dinsdag 9h-17h. 
+De andere dagen van de week op afspraak"></a>
+            </div>
           <div className="contact-details">
             <div className="contact-item">
               <span>Telefoon</span>
