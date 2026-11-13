@@ -160,10 +160,6 @@ export default function App() {
               </a>
             </div>
           </div>
-          <a className="hero-location" href="#contact">
-            <span>Herlegemstraat 66</span>
-            <strong>9040 Destelbergen</strong>
-          </a>
           
         </section>
  <section id="services" className="section services-section">
