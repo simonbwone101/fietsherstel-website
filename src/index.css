@@ -124,7 +124,7 @@ html { scroll-behavior: smooth; }
   position: relative;
   min-height: min(850px, 100svh);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   color: var(--white);
   background: var(--ink);
 }
@@ -145,7 +145,11 @@ html { scroll-behavior: smooth; }
   z-index: 2;
   width: min(calc(100% - 2 * var(--gutter)), var(--content));
   margin: 0 auto;
-  padding: clamp(10rem, 18vh, 12rem) 0 clamp(5rem, 10vh, 8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(8rem, 14vh, 10rem) 0 clamp(4rem, 8vh, 6rem);
+  text-align: center;
 }
 .eyebrow {
   display: flex;
@@ -177,7 +181,13 @@ html { scroll-behavior: smooth; }
   color: rgba(255, 255, 255, 0.84);
   font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
-.hero-actions { display: flex; align-items: center; gap: 2rem; margin-top: 2.5rem; }
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
 .button--primary { color: var(--white); background: var(--accent); }
 .button--primary:hover { background: var(--accent-dark); }
 .text-link {
@@ -480,7 +490,7 @@ html { scroll-behavior: smooth; }
   .hero-image { object-position: 58% center; }
   .hero-content { padding-bottom: 3rem; }
   .hero h1 { font-size: clamp(3rem, 15vw, 4.6rem); }
-  .hero-actions { align-items: flex-start; flex-direction: column; gap: 1.4rem; }
+  .hero-actions { align-items: center; flex-direction: column; gap: 1.4rem; }
   .section-grid { gap: 2rem; }
   .about-visual img { width: 100%; height: 480px; }
   .about-stamp { bottom: -2rem; left: -0.5rem; width: 155px; }
