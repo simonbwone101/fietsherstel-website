@@ -278,11 +278,6 @@ export default function App() {
           </div>
           <div className="contact-details">
             <div className="contact-item">
-              <span>Openingsuren/span>
-              <a href="Dinsdag 9h-17h. 
-De andere dagen van de week op afspraak"></a>
-            </div>
-            <div className="contact-item">
               <span>Telefoon</span>
               <a href="tel:+32470247672">+32 470 24 76 72</a>
             </div>
