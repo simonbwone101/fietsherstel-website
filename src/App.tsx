@@ -111,10 +111,10 @@ export default function App() {
           }`}
           aria-label="Hoofdnavigatie"
         >
-          <a href="#over" onClick={closeMenu}>
+          <a href="#services" onClick={closeMenu}>
             Services
           </a>
-          <a href="#services" onClick={closeMenu}>
+          <a href="#over" onClick={closeMenu}>
             Over ons
           </a>
           <a href="#galerij" onClick={closeMenu}>
