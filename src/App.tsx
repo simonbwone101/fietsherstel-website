@@ -271,6 +271,14 @@ export default function App() {
           </div>
           <div className="contact-details">
             <div className="contact-item">
+              <span>Openingsuren</span>
+              <p>
+                dinsdag 9-17h.
+                <br />
+                De andere dagen van de week op afspraak
+              </p>
+            </div>
+            <div className="contact-item">
               <span>Telefoon</span>
               <a href="tel:+32470247672">+32 470 24 76 72</a>
             </div>
@@ -291,14 +299,6 @@ export default function App() {
                 <br />
                 9040 Destelbergen
               </a>
-            </div>
-            <div className="contact-item">
-              <span>Openingsuren</span>
-              <p>
-                dinsdag 9-17h.
-                <br />
-                De andere dagen van de week op afspraak
-              </p>
             </div>
           </div>
         </section>
