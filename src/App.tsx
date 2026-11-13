@@ -272,7 +272,15 @@ export default function App() {
           <div className="contact-details">
             <div className="contact-item">
               <span>Openingsuren</span>
-              <p>
+              <p
+                style={{
+                  margin: 0,
+                  fontFamily: "'Manrope', sans-serif",
+                  fontSize: "clamp(1rem, 1.6vw, 1.3rem)",
+                  fontWeight: 500,
+                  lineHeight: 1.45,
+                }}
+              >
                 dinsdag 9-17h.
                 <br />
                 De andere dagen van de week op afspraak
