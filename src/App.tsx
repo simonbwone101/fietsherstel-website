@@ -164,8 +164,32 @@ export default function App() {
             <span>Herlegemstraat 66</span>
             <strong>9040 Destelbergen</strong>
           </a>
+          
         </section>
-
+ <section id="services" className="section services-section">
+          <div className="services-intro">
+            <div>
+              <p className="eyebrow eyebrow--light">Onze services</p>
+              <h2>Alles om jouw fiets in topvorm te houden.</h2>
+            </div>
+            <p>
+              Geen standaardoplossing, maar onderhoud afgestemd op je fiets,
+              rijstijl en plannen.
+            </p>
+          </div>
+          <div className="services-list">
+            {services.map((service) => (
+              <article className="service-row" key={service.number}>
+                <span className="service-number">{service.number}</span>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <span className="service-arrow" aria-hidden="true">
+                  <ArrowIcon />
+                </span>
+              </article>
+            ))}
+          </div>
+        </section>
         <section id="over" className="section about-section">
           <div className="section-grid">
             <div className="section-heading">
@@ -202,31 +226,6 @@ export default function App() {
               <span>Persoonlijk atelier</span>
               <strong>Lokaal vakwerk</strong>
             </div>
-          </div>
-        </section>
-
-        <section id="services" className="section services-section">
-          <div className="services-intro">
-            <div>
-              <p className="eyebrow eyebrow--light">Onze services</p>
-              <h2>Alles om jouw fiets in topvorm te houden.</h2>
-            </div>
-            <p>
-              Geen standaardoplossing, maar onderhoud afgestemd op je fiets,
-              rijstijl en plannen.
-            </p>
-          </div>
-          <div className="services-list">
-            {services.map((service) => (
-              <article className="service-row" key={service.number}>
-                <span className="service-number">{service.number}</span>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-                <span className="service-arrow" aria-hidden="true">
-                  <ArrowIcon />
-                </span>
-              </article>
-            ))}
           </div>
         </section>
 
