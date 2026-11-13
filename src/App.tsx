@@ -286,7 +286,7 @@ export default function App() {
             <div className="contact-item">
               <span>Atelier</span>
               <a
-                href="https://maps.google.com/?q=Herlegemstraat+66,+9040+Destelbergen"
+                href="https://maps.app.goo.gl/DNQxkAi936WuGf896"
                 target="_blank"
                 rel="noreferrer"
               >
