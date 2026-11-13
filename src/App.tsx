@@ -144,14 +144,7 @@ export default function App() {
           />
           <div className="hero-shade" />
           <div className="hero-content">
-            <p className="eyebrow eyebrow--light">
-              Fietsatelier in Destelbergen
-            </p>
-            <h1>Vakwerk voor elke sportieve fiets.</h1>
-            <p className="hero-intro">
-              Persoonlijk onderhoud, herstellingen en custom builds voor
-              racefietsen, gravelbikes en trekkingfietsen.
-            </p>
+            <h1>Bikehouse Lein</h1>
             <div className="hero-actions">
               <a
                 className="button button--primary"
