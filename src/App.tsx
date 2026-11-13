@@ -281,7 +281,7 @@ export default function App() {
                   lineHeight: 1.45,
                 }}
               >
-                Dinsdag 9h-17h
+                Dinsdag 9u - 17u
                 <br />
                 Andere dagen van de week op afspraak
               </p>
