@@ -168,14 +168,20 @@ export default function App() {
           </div>
           <div className="services-list">
             {services.map((service) => (
-              <article className="service-row" key={service.number}>
+              <a
+                className="service-row"
+                href={bookingUrl}
+                target="_blank"
+                rel="noreferrer"
+                key={service.number}
+              >
                 <span className="service-number">{service.number}</span>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <span className="service-arrow" aria-hidden="true">
                   <ArrowIcon />
                 </span>
-              </article>
+              </a>
             ))}
           </div>
         </section>
@@ -193,7 +199,7 @@ export default function App() {
                 Vanuit een passie voor het vak ontstond een plek waar de sportieve en karaktervolle fiets centraal staat.  
               </p>
               <p>
-               Zahre combineert Bikehouse Lein met internationaal gravelracen op hoog niveau. Hij is regelmatig te vinden aan de startlijn van grote wedstrijden zoals de Gravel Earth Series en de UCI [...]
+               Zahre combineert Bikehouse Lein met internationaal gravelracen op hoog niveau. Hij is regelmatig te vinden aan de startlijn van grote wedstrijden zoals de Gravel Earth Series en de UCI [...] 
               </p>
               <p>
                 Bikehouse Lein is ook een ontmoetingsplek. We organiseren social rides, drop rides en werken nauw samen met de community van Club 9000. Daarnaast vind je ons wekelijks op donderdag aan[...]
