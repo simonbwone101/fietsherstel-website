@@ -330,7 +330,7 @@ export default function App() {
           >
             Instagram
           </a>
-          <span>BTW nummer: BTW BE 1016.417.072</span>
+          <span>BTW BE 1016.417.072</span>
           <span>© 2026 Bikehouse Lein</span>
         </div>
       </footer>
