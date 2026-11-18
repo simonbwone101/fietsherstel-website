@@ -196,7 +196,7 @@ export default function App() {
                 Bikehouse Lein is het fietsatelier van Zahre Lein.
               </p>
               <p>
-                Gebouwd vanuit een liefde voor de fiets. Bikehouse Lein is het fietsatelier van Zahre Lein. Vanuit een passie voor het vak ontstond een plek waar de sportieve en karaktervolle fiets centraal staat.  
+                Gebouwd vanuit een liefde voor de fiets. Vanuit een passie voor het vak ontstond een plek waar de sportieve en karaktervolle fiets centraal staat.  
               </p>
               <p>
                Zahre combineert Bikehouse Lein met internationaal gravelracen op hoog niveau. Hij is regelmatig te vinden aan de startlijn van grote wedstrijden zoals de Gravel Earth Series en de UCI Gravel World Series.
