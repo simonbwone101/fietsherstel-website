@@ -193,10 +193,10 @@ export default function App() {
                 Vanuit een passie voor het vak ontstond een plek waar de sportieve en karaktervolle fiets centraal staat.  
               </p>
               <p>
-               Zahre combineert Bikehouse Lein met internationaal gravelracen op hoog niveau. Hij is regelmatig te vinden aan de startlijn van grote wedstrijden zoals de Gravel Earth Series en de UCI Gravel World Series.
+               Zahre combineert Bikehouse Lein met internationaal gravelracen op hoog niveau. Hij is regelmatig te vinden aan de startlijn van grote wedstrijden zoals de Gravel Earth Series en de UCI [...]
               </p>
               <p>
-                Bikehouse Lein is ook een ontmoetingsplek. We organiseren social rides, drop rides en werken nauw samen met de community van Club 9000. Daarnaast vind je ons wekelijks op donderdag aan het werk bij Giedion.
+                Bikehouse Lein is ook een ontmoetingsplek. We organiseren social rides, drop rides en werken nauw samen met de community van Club 9000. Daarnaast vind je ons wekelijks op donderdag aan[...]
               </p>
             </div>
           </div>
@@ -330,6 +330,7 @@ export default function App() {
           >
             Instagram
           </a>
+          <span>BTW nummer: BTW BE 1016.417.072</span>
           <span>© 2026 Bikehouse Lein</span>
         </div>
       </footer>
