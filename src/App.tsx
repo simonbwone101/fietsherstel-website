@@ -315,9 +315,6 @@ export default function App() {
           href="#home"
           aria-label="Bikehouse Lein, naar home"
         >
-          <span className="brand-mark" aria-hidden="true">
-            BL
-          </span>
           <span>
             <strong>Bikehouse Lein</strong>
             <small>Herlegemstraat 66</small>
